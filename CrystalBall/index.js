@@ -23,7 +23,7 @@
       this.startAngle=0;
       this.endAngle=Math.PI*2;
     }
-    
+
     AnimationClass.prototype.draw=function (){
        ctx.save();
        ctx.fillStyle=this.color;
@@ -33,11 +33,11 @@
        ctx.restore();
        this.sport();
     }
- 
+
     AnimationClass.prototype.sport=function (){
         this.y+=this.speed;
     }
-    
+
     var drawArr=[];
     function show(){
        can.height=can.height;
@@ -46,8 +46,7 @@
        for(var i in drawArr){
          drawArr[i].draw();
        }
-       requestAnimationFrame(show);//循环调用  
+       requestAnimationFrame(show);//循环调用
     }
     show();
    }
-  
